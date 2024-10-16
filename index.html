@@ -42,10 +42,31 @@
             </div>
         </div>
         <div class="content-wrapper">
-            <div class="header">
+            <div class="header border-bottom border-secondary-subtle">
+                <p class="text-header">Звіт</p>
+                <p class="text-header">По лабораторним роботам з курсу</p>
+                <p class="text-header">"Cучасні технології Інтернет-програмування"</p>
+                <p class="text-header">Студента групи ІПЗ-22-1</p>
+                <p class="text-header">Федоренкова Дмитра</p>
             </div>
-            <div id="display" class="display">
-                biba
+            <div class="display-wrapper">
+                <div class="display-options">
+                    <div class="button-wrapper">
+                        <button id="btn-html" onclick="loadDoc('lab1')" type="button" class="btn btn-primary">HTML</button>
+                    </div>
+                    <div class="button-wrapper">
+                        <button id="btn-css" onclick="loadDoc('lab2')" type="button" class="btn btn-primary">CSS</button>
+                    </div>
+                    <div class="button-wrapper">
+                        <button id="btn-js" onclick="loadDoc('lab3')" type="button" class="btn btn-primary">JS</button>
+                    </div>
+                    <div class="button-wrapper">
+                        <button id="btn-result" onclick="loadDoc('lab4')" type="button" class="btn btn-primary">Результат</button>
+                    </div>
+                </div>
+                <div id="display" class="border border-secondary-subtle">
+
+                </div>
             </div>
         </div>
     </div>

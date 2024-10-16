@@ -1,4 +1,9 @@
 const d = document.getElementById("display");
+var selectedDoc = "";
+
+
+
 function loadDoc(doc) {
-    d.innerHTML = `<object type="text/html" data="docs/${doc}/${doc}.html"></object>`;
+    selectedDoc = doc;
 }
+
