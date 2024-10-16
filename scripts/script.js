@@ -1,2 +1,4 @@
-let b = document.getElementById("button");
-b.addEventListener("click", () => console.log("Hello world!"));
+const d = document.getElementById("display");
+function loadDoc(doc) {
+    d.innerHTML = `<object type="text/html" data="docs/${doc}"></object>`;
+}
