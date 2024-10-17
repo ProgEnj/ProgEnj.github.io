@@ -3,8 +3,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="lab2.css">
 </head>
 <body>
-    Im here! Hello, world!
+    <p style="font-size: 20;">
+        Завдання 1. Варіант 6. Вертикальне дворівневе меню, що розкривається при натисканні лівою
+        кнопкою миші. <br> Другий рівень меню ховається при повторному натисканні на вибраному пункті.
+    </p>
+
+    <ul class="menu">
+        <li class="menu-item" onclick="toggleSubmenu('submenu1')">Пункт 1</li>
+        <ul class="submenu" id="submenu1">
+            <li class="submenu-item">Підпункт 1.1</li>
+            <li class="submenu-item">Підпункт 1.2</li>
+        </ul>
+        <li class="menu-item" onclick="toggleSubmenu('submenu2')">Пункт 2</li>
+        <ul class="submenu" id="submenu2">
+            <li class="submenu-item">Підпункт 2.1</li>
+            <li class="submenu-item">Підпункт 2.2</li>
+        </ul>
+    </ul>
+
+    <p style="font-size: 20;">
+        Варіант 8. Організуйте рух зображення праворуч наліво.
+    </p>
+
+    <img src="random.jpg" alt="img" id="rimg">
 </body>
+<script src="lab2.js"></script>
 </html>
