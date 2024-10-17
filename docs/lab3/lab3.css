@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.slider {
+    text-align: center;
+}
+
+/* Стиль для зображень */
+.slider img {
+    max-width: 400px;
+    height: auto;
+}
+
+/* Стиль для підпису */
+.caption {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Стиль для кнопок */
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.buttons button:hover {
+    background-color: #2980b9;
+}
