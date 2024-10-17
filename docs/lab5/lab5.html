@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lab5.css">
+</head>
+<body>
+    <p style="font-size: large;"> 
+        За натисканням кнопки виводити модальне вікно з текстом +
+        текст із текстового поля (попередньо введений)
+    </p>
+
+    <div class="form-field">
+        <label for="userInput">Введіть текст:</label>
+        <input type="text" id="userInput" placeholder="Введіть щось...">
+    </div>
+    <button id="openModal">Відкрити модальне вікно</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h2>Модальне вікно з текстом</h2>
+            <p id="userText"></p>
+            <button id="closeModal">Закрити</button>
+        </div>
+    </div>
+    <p style="font-size: large; margin-top: 50px;"> 
+        Анімація: Заголовок червоного кольору рухається зліва направо,
+        зменшується і збільшується по 2 рази відповідно, поки
+        не дійде до правого краю
+    </p>
+    <div class="container">
+            <h1 id="animatedHeader">Рухомий заголовок</h1>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="lab5.js"></script>
+</html>
