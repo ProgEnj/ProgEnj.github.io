@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lab4.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Форма реєстрації</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <div class="form-field">
+                <label for="firstName">Ім'я:</label>
+                <input type="text" id="firstName" name="firstName">
+                <div id="firstNameError" class="error"></div>
+            </div>
+
+            <div class="form-field">
+                <label for="lastName">Прізвище:</label>
+                <input type="text" id="lastName" name="lastName">
+                <div id="lastNameError" class="error"></div>
+            </div>
+
+            <div class="form-field">
+                <label for="organization">Найменування організації:</label>
+                <input type="text" id="organization" name="organization">
+                <div id="organizationError" class="error"></div>
+            </div>
+
+            <div class="form-field">
+                <label for="creditCard">Номер кредитної картки:</label>
+                <input type="text" id="creditCard" name="creditCard">
+                <div id="creditCardError" class="error"></div>
+            </div>
+
+            <div class="form-field">
+                <label for="phone">Номер телефону:</label>
+                <input type="text" id="phone" name="phone">
+                <div id="phoneError" class="error"></div>
+            </div>
+
+            <div class="form-field">
+                <label for="email">Адреса електронної пошти:</label>
+                <input type="text" id="email" name="email">
+                <div id="emailError" class="error"></div>
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Надіслати</button>
+                <button type="button" onclick="clearForm()">Очистити</button>
+            </div>
+        </form>
+    </div>
+    <p style="font-size: 20px;">
+        20. Дано рядок &#39;aaa aaa aaa&#39;. Напишіть регулярний вираз, який
+        замінить останній &#39;aaa&#39; на &#39;!&#39;.
+    </p>
+    <input type="text" id="inputRegex" value="aaa aaa aaa">
+    <button id="button-regex" type="button" onclick="replaceQuery()">Замінити</button>
+    <p id="showRegex">Регулярний вираз: /aaa$/</p>
+
+</body>
+<script src="lab4.js"></script>
+</html>
