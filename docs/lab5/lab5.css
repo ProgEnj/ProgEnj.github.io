@@ -53,6 +53,11 @@ body {
     border-radius: 5px;
 }
 
+#checkbox {
+    width: 15px;
+    height: 15px;
+}
+
 h1 {
     color: red;
     position: absolute;
@@ -67,4 +72,8 @@ h1 {
     overflow: hidden;
     position: relative;
     border: 1px solid #ccc;
+}
+
+#secondElement {
+    display: none;
 }
