@@ -1,4 +1,5 @@
 const d = document.getElementById("display");
+const text = document.getElementById("display-text");
 var doc = "";
 
 function loadDoc(selectedDoc) {
@@ -6,18 +7,23 @@ function loadDoc(selectedDoc) {
 }
 
 function loadContent(type, option) {
-    fetch(`docs/${doc}/${doc}.${type}`).then(response => {
+    let path = `docs/${doc}/${doc}.${type}`;
+    fetch(path).then(response => {
         if(!response.ok) {
-            d.textContent = "404, not found";
+            d.src = "docs/404.html";
         }
         else {
-            if(option == "result"){
-                d.style.whiteSpace = "initial";
-                response.text().then(html => d.innerHTML = html)
+            if (option == "result"){
+                console.log("d")
+                text.style.display = "none";
+                d.style.display = "block";
+                d.src = path;
             }
-            else{
-                d.style.whiteSpace = "pre";
-                response.text().then(html => d.textContent = html);
+            else {
+                console.log("text");
+                d.style.display = "none";
+                text.style.display = "block";
+                response.text().then(html => text.textContent = html);
             }
         }
     });

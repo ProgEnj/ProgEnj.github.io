@@ -1,14 +1,11 @@
-body {
+.slider {
     font-family: Arial, sans-serif;
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-}
-
-.slider {
-    text-align: center;
 }
 
 /* Стиль для зображень */
