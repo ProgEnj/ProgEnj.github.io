@@ -39,7 +39,7 @@
 
 .display-wrapper {
     display: flex;
-    height: 70%;
+    height: 60%;
 }
 
 .display-options {
@@ -53,6 +53,7 @@
 #display-text {
     display: none;
     margin: 20px;
+    margin-top: 0px;
     width: 100%;
     height: 90%;
     white-space: pre;

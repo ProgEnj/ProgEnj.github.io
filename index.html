@@ -40,6 +40,14 @@
             <div class="button-wrapper">
                 <button id="btn-lab10" onclick="loadDoc('lab10')" type="button" class="btn btn-primary">Лабораторна робота № 10</button>
             </div>
+            <div class="button-wrapper" style="display: flex;justify-content: center;">
+                <p style="font-size: 20; display: inline;">
+                    Обрана робота: 
+                </p>
+                <p id="nowdoc" style="display: inline; font-size: 20;">
+                    
+                </p>
+            </div>
         </div>
         <div class="content-wrapper">
             <div class="header border-bottom border-secondary-subtle">
@@ -48,6 +56,14 @@
                 <p class="text-header">"Cучасні технології Інтернет-програмування"</p>
                 <p class="text-header">Студента групи ІПЗ-22-1</p>
                 <p class="text-header">Федоренкова Дмитра</p>
+            </div>
+            <div class="button-wrapper" style="display: flex;justify-content: center;">
+                <p style="font-size: 20; display: inline;">
+                    Обраний файл: 
+                </p>
+                <p id="nowopt" style="display: inline; font-size: 20;">
+                    
+                </p>
             </div>
             <div class="display-wrapper">
                 <div class="display-options">
@@ -62,6 +78,9 @@
                     </div>
                     <div class="button-wrapper">
                         <button id="btn-result" onclick="loadContent('html', 'result')" type="button" class="btn btn-primary">Результат</button>
+                    </div>
+                    <div>
+                        <a href="#" id="goto" class="btn btn-primary">Перейти</a>
                     </div>
                 </div>
                 <div id="display-text" class="border border-secondary-subtle"></div>
