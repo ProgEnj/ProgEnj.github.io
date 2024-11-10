@@ -6,8 +6,7 @@ function loadContent(where, what) {
     });
 }
 
-loadContent(lab6, "Lab6.xml");
-
+loadContent(lab6, "Lab6.xsl");
 
 function loadXMLDoc(filename) {
     let xhttp = new XMLHttpRequest();
