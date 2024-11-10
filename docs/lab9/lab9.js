@@ -6,7 +6,7 @@ function loadContent(where, what) {
     });
 }
 
-loadContent(lab6, "lab6.xml");
+loadContent(lab6, "Lab6.xml");
 
 
 function loadXMLDoc(filename) {
