@@ -3,7 +3,6 @@ async function loadXML(file){
     const response = await fetch(file);
     const text = await response.text();
     const xmlDoc = parser.parseFromString(text, 'application/xml');
-    console.log(xmlDoc);
     return xmlDoc;
 }
 
@@ -15,7 +14,7 @@ function displayXML(){
     });
 }
 
-function loadTable(){
+function loadTable(digitsToWords){
     loadXML("doctors.xml").then(xmlDoc => { 
         const tableContainer = document.getElementById('table-insert');
         // Створення таблиці
@@ -42,9 +41,16 @@ function loadTable(){
             const lastName = doctor.getElementsByTagName('last_name')[0].textContent;
             const firstName = doctor.getElementsByTagName('first_name')[0].textContent;
             const middleName = doctor.getElementsByTagName('middle_name')[0].textContent;
-            const days = doctor.getElementsByTagName('days')[0].textContent;
-            const time = doctor.getElementsByTagName('time')[0].textContent;
-            const office = doctor.getElementsByTagName('office')[0].textContent;
+            if(digitsToWords){
+                 var days = numberToWords(doctor.getElementsByTagName('days')[0].textContent);
+                 var time = numberToWords(doctor.getElementsByTagName('time')[0].textContent);
+                 var office = numberToWords(doctor.getElementsByTagName('office')[0].textContent);
+            }
+            else{
+                 var days = doctor.getElementsByTagName('days')[0].textContent;
+                 var time = doctor.getElementsByTagName('time')[0].textContent;
+                 var office = doctor.getElementsByTagName('office')[0].textContent;
+            }
 
             const row = document.createElement('tr');
             row.className = "t-tb-tr table";
@@ -62,4 +68,15 @@ function loadTable(){
 
         tableContainer.appendChild(table); 
     });
+}
+
+function numberToWords(num) {
+    const ones = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+    var digits = num.split('');
+    for (i = 0; i < digits.length; i++){
+        if(!isNaN(digits[i]) && !(digits[i] == " ")){
+            digits[i] = ones[Number(digits[i])];
+        }
+    }
+    return digits.join('');
 }
