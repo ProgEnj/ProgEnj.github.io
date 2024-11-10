@@ -10,7 +10,7 @@ addEventListener("load", onLoad);
 
 function onLoad() {
     doc = url.searchParams.get("doc");
-    type = url.searchParams.get("type");
+    let type = url.searchParams.get("type");
     if(doc != null){
         loadDoc(doc);
     }

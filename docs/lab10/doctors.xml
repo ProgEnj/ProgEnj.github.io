@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medical_center>
+    <doctor>
+        <specialization>Кардіолог</specialization>
+        <name>
+            <last_name>Іваненко</last_name>
+            <first_name>Іван</first_name>
+            <middle_name>Петрович</middle_name>
+        </name>
+        <schedule>
+            <days>Понеділок, Середа, П'ятниця</days>
+            <time>09:00 - 13:00</time>
+        </schedule>
+        <office>101</office>
+    </doctor>
+    
+    <doctor>
+        <specialization>Терапевт</specialization>
+        <name>
+            <last_name>Сидоренко</last_name>
+            <first_name>Ольга</first_name>
+            <middle_name>Миколаївна</middle_name>
+        </name>
+        <schedule>
+            <days>Вівторок, Четвер, Субота</days>
+            <time>10:00 - 14:00</time>
+        </schedule>
+        <office>102</office>
+    </doctor>
+    
+    <doctor>
+        <specialization>Невролог</specialization>
+        <name>
+            <last_name>Коваленко</last_name>
+            <first_name>Наталія</first_name>
+            <middle_name>Іванівна</middle_name>
+        </name>
+        <schedule>
+            <days>Понеділок, Середа</days>
+            <time>08:00 - 12:00</time>
+        </schedule>
+        <office>103</office>
+    </doctor>
+    
+    <doctor>
+        <specialization>Хірург</specialization>
+        <name>
+            <last_name>Петренко</last_name>
+            <first_name>Петро</first_name>
+            <middle_name>Іванович</middle_name>
+        </name>
+        <schedule>
+            <days>Вівторок, Четвер</days>
+            <time>09:00 - 15:00</time>
+        </schedule>
+        <office>104</office>
+    </doctor>
+
+    <doctor>
+        <specialization>Гінеколог</specialization>
+        <name>
+            <last_name>Сидоренко</last_name>
+            <first_name>Марія</first_name>
+            <middle_name>Володимирівна</middle_name>
+        </name>
+        <schedule>
+            <days>Понеділок, П'ятниця</days>
+            <time>14:00 - 18:00</time>
+        </schedule>
+        <office>105</office>
+    </doctor>
+
+    <doctor>
+        <specialization>Офтальмолог</specialization>
+        <name>
+            <last_name>Демченко</last_name>
+            <first_name>Віктор</first_name>
+            <middle_name>Сергійович</middle_name>
+        </name>
+        <schedule>
+            <days>Середа, П'ятниця</days>
+            <time>12:00 - 16:00</time>
+        </schedule>
+        <office>106</office>
+    </doctor>
+
+    <doctor>
+        <specialization>Педіатр</specialization>
+        <name>
+            <last_name>Лисенко</last_name>
+            <first_name>Ірина</first_name>
+            <middle_name>Миколаївна</middle_name>
+        </name>
+        <schedule>
+            <days>Понеділок - П'ятниця</days>
+            <time>09:00 - 14:00</time>
+        </schedule>
+        <office>107</office>
+    </doctor>
+
+    <doctor>
+        <specialization>Дерматолог</specialization>
+        <name>
+            <last_name>Ткаченко</last_name>
+            <first_name>Олександр</first_name>
+            <middle_name>Андрійович</middle_name>
+        </name>
+        <schedule>
+            <days>Вівторок, Четвер</days>
+            <time>11:00 - 15:00</time>
+        </schedule>
+        <office>108</office>
+    </doctor>
+
+    <doctor>
+        <specialization>Ендокринолог</specialization>
+        <name>
+            <last_name>Кравченко</last_name>
+            <first_name>Олена</first_name>
+            <middle_name>Григорівна</middle_name>
+        </name>
+        <schedule>
+            <days>Понеділок, Середа</days>
+            <time>13:00 - 17:00</time>
+        </schedule>
+        <office>109</office>
+    </doctor>
+
+    <doctor>
+        <specialization>Стоматолог</specialization>
+        <name>
+            <last_name>Мельник</last_name>
+            <first_name>Юрій</first_name>
+            <middle_name>Васильович</middle_name>
+        </name>
+        <schedule>
+            <days>Понеділок - П'ятниця</days>
+            <time>08:00 - 13:00</time>
+        </schedule>
+        <office>110</office>
+    </doctor>
+</medical_center>
