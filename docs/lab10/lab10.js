@@ -41,13 +41,12 @@ function loadTable(digitsToWords){
             const lastName = doctor.getElementsByTagName('last_name')[0].textContent;
             const firstName = doctor.getElementsByTagName('first_name')[0].textContent;
             const middleName = doctor.getElementsByTagName('middle_name')[0].textContent;
+                 days = doctor.getElementsByTagName('days')[0].textContent;
             if(digitsToWords){
-                 var days = numberToWords(doctor.getElementsByTagName('days')[0].textContent);
                  var time = numberToWords(doctor.getElementsByTagName('time')[0].textContent);
                  var office = numberToWords(doctor.getElementsByTagName('office')[0].textContent);
             }
             else{
-                 var days = doctor.getElementsByTagName('days')[0].textContent;
                  var time = doctor.getElementsByTagName('time')[0].textContent;
                  var office = doctor.getElementsByTagName('office')[0].textContent;
             }
@@ -70,13 +69,37 @@ function loadTable(digitsToWords){
     });
 }
 
-function numberToWords(num) {
+function ReplaceNum(num){
     const ones = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
-    var digits = num.split('');
-    for (i = 0; i < digits.length; i++){
+    const teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+    const tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+    if(num == "00") return "zero zero";
+    if(num[0] == "0" && num.length > 1){
+        var digits = num.split('');
+        digits.shift();
+        num = Number(digits.join(""));
+    }
+
+    if (num < 10) return ones[num];
+    if (num < 20) return teens[num - 10];
+    if (num < 100) return tens[Math.floor(num / 10)] + (num % 10 !== 0 ? " " + ones[num % 10] : "");
+    if (num < 1000) return `${ones[num[0]]} hundred and ${ReplaceNum(num.slice(1))}`
+}
+
+function numberToWords(line) {
+    var str = line;
+    var digits = line.split('');
+    var foundDigit = "";
+    //debugger;
+    for(i = 0; i <= digits.length; i++){
         if(!isNaN(digits[i]) && !(digits[i] == " ")){
-            digits[i] = ones[Number(digits[i])];
+            foundDigit += digits[i];
+        }
+        else if(foundDigit.length > 0){
+            str = str.replace(foundDigit, ReplaceNum(foundDigit));
+            console.log(str)
+            foundDigit = "";
         }
     }
-    return digits.join('');
+    return str;
 }
